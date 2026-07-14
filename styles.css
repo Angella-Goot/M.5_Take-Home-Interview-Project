@@ -1,5 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Russo One', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #2d2c2c
+}
+
+/* NAV */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #626161;
+    padding: 0 80px;
+}
+
+.logo {
+    width: 250px;
+    height: 200px;
+}
+
+.nav__link--list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__link {
+    margin: 0 20px;
+    font-size: 22px;
+    letter-spacing: .5px;
+    transition: color 300ms ease, text-shadow 300ms ease;
+}
+
+.nav__link:hover {
+  color: #5cae39;
+  text-shadow:
+    0 0 4px #5cae39,
+    0 0 8px #5cae39,
+    0 0 16px #5cae39,
+    0 0 32px #5cae39;
 }
