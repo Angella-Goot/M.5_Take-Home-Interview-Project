@@ -12,6 +12,10 @@ a {
     color: #2d2c2c;
 }
 
+body {
+    background-color: #5d5a5a;
+}
+
 /* NAV */
 
 .nav {
@@ -52,7 +56,9 @@ a {
 
 header {
     min-height: 100vh;
-    background-color: #5d5a5a;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .title__wrapper {
@@ -79,10 +85,10 @@ header {
 .secondary__logo {
     width: 150px;
     height: 150px;
-    padding-top: 14px;
+    padding-top: 8px;
 }
 
-.header__input {
+.header__input, .search__wrapper {
     width: 100%;
     max-width: 448px;
     height: 68px;
@@ -129,6 +135,27 @@ button:hover {
         0 0 16px #a11010,
         0 0 32px #a11010;
 }
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.footer__logo {
+    width: 150px;
+    height: 150px;
+}
+
+.footer__copyright {
+    color: #2d2c2c9e;
+    font-size: 12px;
+}
+
+/* SEARCH.HTML*/
 
 
 
