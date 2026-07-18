@@ -1,9 +1,11 @@
-async function main() {
-    const movies = await fetch("https://www.omdbapi.com/?i=tt3896198&apikey=1114bf7d&s=zombie")
-    const moviesData = await movies.json()
+const searchInput = document.querySelector(".search__input")
+const searchBtn = document.querySelector(".search__btn")
 
-    console.log(moviesData)
-}
+searchBtn.addEventListener("click", () => {
+    const search = searchInput.value
 
-main()
+    window.location.href = `search.html?search=${search}`
+})
 
+// index.js jobs is to only get the search value
+//  and navigate to search.html with that value

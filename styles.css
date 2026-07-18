@@ -94,8 +94,8 @@ input:focus, select:focus {
 
 .header__input {
     width: 100%;
-    max-width: 448px;
-    height: 68px;
+    max-width: 524px;
+    height: 80px;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -189,7 +189,7 @@ footer {
     margin-bottom: 16px;
 }
 
-.search__button {
+.search__btn {
     font-size: 20px;
 }
 
