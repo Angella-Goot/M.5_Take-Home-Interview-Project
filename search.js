@@ -23,18 +23,10 @@ async function fetchMovies() {
     }
     else {displayMovies(movies)}
 
-    console.log(movies) 
+    // console.log(movies) 
 }
 
 fetchMovies()
-
-// DISPLAY ARRAY
-
-function displayMovies(movieArray) {
-    resultListElm.innerHTML = movieArray
-    .map(movie => renderMovie(movie))
-    .join('')
-}
 
 // RENDER MOVIE - TURN EACH MOVIE OBJECT INTO HTML
 
@@ -46,6 +38,14 @@ function renderMovie(movie) {
                     <p class="movie__date">${movie.Year}</p>
                 </div>
             </div>`
+}
+
+// DISPLAY ARRAY
+
+function displayMovies(movieArray) {
+    resultListElm.innerHTML = movieArray
+    .map(movie => renderMovie(movie))
+    .join('')
 }
 
 // SEARCH BAR
@@ -64,6 +64,26 @@ function filterMovies(searchTerm) {
 
     displayMovies(filteredMovies)
 }
+
+// SORT MOVIES
+
+function sortMovies(event) {
+    if (event.target.value === 'OLD_TO_NEW') {
+        movies.sort((a, b) => a.Year - b.Year)
+    }
+    else if (event.target.value === 'NEW_TO_OLD') {
+        movies.sort((a, b) => b.Year - a.Year)
+    }
+    else if (event.target.value === 'A_TO_Z') {
+        movies.sort((a, b) => a.Title.localeCompare(b.Title))
+    }
+    else if (event.target.value === 'Z_TO_A') {
+        movies.sort((a, b) => b.Title.localeCompare(a.Title))
+    }
+    displayMovies(movies)
+}
+
+
 
 
 

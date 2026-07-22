@@ -34,12 +34,12 @@
         <div class="container">
             <div class="row">
                 <div class="filter__wrapper">
-                    <select name="" id="filter">
+                    <select id="filter" onchange="sortMovies(event)">
                         <option value="" disabled selected>Filter Results</option>
-                        <option value="">Sort A to Z</option>
-                        <option value="">Sort Z to A</option>
-                        <option value="">New to Old</option>
-                        <option value="">Old to New</option>
+                        <option value="A_TO_Z">Sort A to Z</option>
+                        <option value="Z_TO_A">Sort Z to A</option>
+                        <option value="NEW_TO_OLD">New to Old</option>
+                        <option value="OLD_TO_NEW">Old to New</option>
                     </select>
                 </div>
                 <div class="results">
